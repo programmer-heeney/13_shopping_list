@@ -25,6 +25,13 @@ function item(itemTitle) {
     itemList.appendChild(deleteBtn);
     itemContainer.appendChild(itemList);
 
+    itemList.addEventListener("click", (event) => {
+        const target = event.target;
+        if(target.classList.contains("item-cancel")){
+            target.classList.remove("item-cancel");
+        }
+        else {target.classList.add("item-cancel")}
+    })
     deleteBtn.addEventListener("click", (event) => {
         const target = event.target;
         if(target.classList.contains("item-delete")){

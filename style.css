@@ -114,4 +114,10 @@ h1 {
 #item {
   border-bottom: solid 1px var(--color-grey);
   margin-bottom: 12px;
+  cursor: pointer;
+}
+
+#item.item-cancel {
+  text-decoration: line-through;
+  color: var(--color-grey);
 }
