@@ -110,3 +110,8 @@ h1 {
   color: #bbded6;
   transition: all 0.3s ease-in-out;
 }
+
+#item {
+  border-bottom: solid 1px var(--color-grey);
+  margin-bottom: 12px;
+}
