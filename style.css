@@ -1,6 +1,20 @@
+:root {
+  --color-background: #f9f7e8;
+  --color-mint: #61bfad;
+  --color-white: #ffffff;
+  --color-pink: #ff8b8b;
+  --color-grey: #8f8f8f;
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-background);
+  position: relative;
+  height: 100vh;
 }
 
 li,
@@ -9,34 +23,86 @@ ul {
   padding: 0;
 }
 
+button {
+  border-style: none;
+  background-color: transparent;
+  outline-style: none;
+  font-size: large;
+}
+
+h1 {
+  color: var(--color-background);
+}
+
+/* App container */
+.app-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 350px;
+  height: 520px;
+  margin: auto;
+  background-color: var(--color-pink);
+  border-radius: 8px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
 /* Header */
 .header h1 {
   text-align: center;
   padding: 12px 0px;
 }
 
-/* item-input */
-.item-input {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 22px;
-  width: 70%;
-  margin: auto;
-}
-
-#item-input {
-  width: 100%;
-  margin-right: 8px;
-}
-
 /* item-display */
 .item-display {
-  width: 70%;
+  background-color: var(--color-white);
+  height: 400px;
   margin: auto;
-  margin-top: 22px;
+  padding: 14px;
 }
 
 #item {
   display: flex;
   justify-content: space-between;
+}
+
+.item-delete:hover {
+  color: var(--color-pink);
+  transition: all 0.3s ease-in-out;
+}
+
+/* item-input */
+.item-input {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto;
+}
+
+#item-input {
+  width: 100%;
+  height: 20px;
+  padding: 4px 8px;
+  outline-style: none;
+  border-style: none;
+  background-color: var(--color-background);
+}
+
+.item-add {
+  font-size: x-large;
+  padding-top: 3px;
+  color: var(--color-background);
+}
+
+.item-add:hover {
+  color: #bbded6;
+  transition: all 0.3s ease-in-out;
 }

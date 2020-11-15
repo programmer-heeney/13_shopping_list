@@ -5,24 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping List</title>
     <link rel="stylesheet" href="style.css">
+    <script
+      src="https://kit.fontawesome.com/2b05509517.js"
+      crossorigin="anonymous"
+    ></script>
 </head>
 <body>
-    <header class="header">
-        <h1 class="title">Shopping List</h1>
-    </header>
-    <main class="contents">
-        <section class="item-input">
-            <input type="text" id="item-input">
-            <input type="button" value="add">
-        </section>
-        <section class="item-display">
-            <ul class="item-container">
-                <li id="item">
-                    <h4 class="item-title">item</h4>
-                    <button class="item-delete">delete</button>
-                </li>
-            </ul>
-        </section>
-    </main>
+    <div class="app-container">
+        <header class="header">
+            <h1 class="title">Shopping List</h1>
+        </header>
+        <main class="contents">
+            <section class="item-display">
+                <ul class="item-container">
+                    <li id="item">
+                        <h4 class="item-title">item</h4>
+                        <button class="item-delete"><i class="fas fa-trash-alt"></i></button>
+                    </li>
+                </ul>
+            </section>
+            <section class="item-input">
+                <input type="text" id="item-input" placeholder="Enter an item to purchase">
+                <button class="item-add"><i class="fas fa-plus-circle"></i></button>
+            </section>
+        </main>
+    </div>
+    
 </body>
 </html>
