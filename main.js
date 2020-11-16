@@ -4,16 +4,23 @@
 const addBtn = document.querySelector(".item-add");
 const itemContainer = document.querySelector(".item-container");
 const itemInput = document.querySelector('#item-input');
-addBtn.addEventListener("click", (event)=> {
-    const target = event.target;
+addBtn.addEventListener("click", ()=> {
+    addItem();
+})
+
+itemInput.addEventListener('keyup', (event)=>{
+    if(event.keyCode === 13) {
+        addItem();
+    }
+})
+
+function addItem() {
     const itemTitle = itemInput.value;
-    console.log(itemTitle);
     if(itemTitle !== ''){
         item(itemTitle);
         itemInput.value = '';
     }
-    
-})
+}
 
 function item(itemTitle) {
     const itemList = document.createElement('li');
